@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="treinamento-interno.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TREINAMENTO INTERNO</title>
+    <style>
+        
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #fefefe;
+            color: #04c804c3;
+            padding: 0px 0px;
+            z-index: 1000;
+        }
+        .header .logo {
+            margin-left: 20px;
+            display: inline-block;
+        }
+        .header nav a {
+            color: #07c700;
+            text-decoration: none;
+            margin: 0 15px;
+            position: relative;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: #26e600;
+            padding: 10px 0;
+            border-radius: 5px;
+        }
+        .dropdown a {
+            display: block;
+            color: #39f755;
+            padding: 5px 20px;
+            text-decoration: none;
+        }
+        .dropdown a:hover {
+            background-color: #00a20869;
+        }
+        .header nav a:hover .dropdown {
+            display: block;
+        }
+        .infinite-scroll {
+            height: 2000px; /* Apenas para simular rolagem infinita */
+            background: #f4f4f4;
+        }
+    
+    </style>
+</head>
+    <div class="header">
+        <div class="logo">
+            
+             <!-- MENU FIXO -->
+             <a href="http://127.0.0.1:5500/html.html#">
+                <img src="../IMAGENS/LOGO-FINAL-GRUPO-HD-CENTER-PNG-1024x397.png" alt="Logo da empresa" height="50">
+                </a>
+        </div>
+        <nav class="menu-fixo">
+            <a href="index.html">
+        
+            </a>
+            <ul>
+                <a href="http://127.0.0.1:5500/html.html#">INICIO</a>
+                <a href="http://127.0.0.1:5500/TREINAMENTOS%20CONDOMINIOS/treinamentos-condominios.html">TREINAMENTO CLIENTES</a>
+                <a href="http://127.0.0.1:5500/DUVIDAS/duvidas.html">DUVIDAS</a>
+            </ul>
+        </nav>
+    </div>
+    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinamento Interno</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            height: 100%;
+            width: 150px;
+            position: flex;
+            top: 1pxs;
+            left: 10px;
+            background-color: #45a049;
+            color: rgb(255, 255, 255);
+            padding-top: 0px;
+            padding-left: 1px;
+        }
+
+        .sidebar a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .sidebar a:hover {
+            background-color: #00a20869;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 270px;
+            padding: 1px;
+        }
+
+        
+
+        /* Cards de Treinamento */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            color: #333;
+            font-size: 18px;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .card button {
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .card button:hover {
+            background-color: #45a049;
+        }
+
+        /* Search Bar */
+       
+    </style>
+</head>
+<body>
+ <!-- Sidebar -->
+ <div class="sidebar">
+    
+    <a href="#">Envio de QRCode 3CX</a>
+    <a href="#">HikConect</a>
+    <a href="#">IVMS</a>
+    <a href="#">Sem Parar</a>
+    <a href="#">Convite de Cadastro</a>
+    <a href="#">Pesquisa de Cadastrado</a>
+    <a href="#">Unidade</a>
+    <a href="#">Verificar Equipamentos Offline</a>
+    <a href="#">Verificar Rotas de Acesso</a>
+    <a href="#">Verificar Foto Facial</a>
+    <a href="#">Verificar Câmera offline</a>
+    <a href="#">Provisionamento no CMD</a>
+    <a href="#">Provisionamento no MikroTik</a>
+    <a href="#">Provisionamento G8</a>
+    <a href="#">Provisionamento no Parks</a>
+    <a href="#">Liberar Slot</a>
+    <a href="#">Verificar Qualidade de Rede</a>
+    <a href="#">Procedimento Queda de Condominio (Redes)</a>
+    <a href="#">Procedomento Queda de Condomínio (MovLink)</a>
+    <a href="#">Procedimento Queda de Condomínio Atendimento</a>
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+    
+
+</div>
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Bem-vindo à Área de Treinamento Interno!</h1>
+        <p>Encontre aqui os materiais de treinamento que você precisa para realizar suas tarefas com segurança e eficiência.</p>
+
+        <!-- Barra de Pesquisa -->
+
+        <div id="search-bar">
+            <input type="text" placeholder="Pesquise sua dúvida..." id="search-input">
+            <button id="search-button">Pesquisar</button>
+        </div>
+        <!-- Cards de Treinamento -->
+        <div class="card-container">
+            <div class="card">
+                <h3>Treinamento Operacional Atendimento</h3>
+                <p>Procedimentos operacionais utilizados no setor de atendimento helpdesk</p>
+                <button>Acessar Treinamento</button>
+            </div>
+            <div class="card">
+                <h3>Treinamento Operacional Integração</h3>
+                <p>Procedimentos operacionais utilizados no setor de Integração de sistemas internamente e externamente</p>
+                <button>Acessar Treinamento</button>
+            </div>
+            <div class="card">
+                <h3>Treinamento Operacional MovLink</h3>
+                <p>Procedimentos operacionais utilizados no setor de atendimento MovLink</p>
+                <button>Acessar Treinamento</button>
+            </div>
+            <div class="card">
+                <h3>Treinamento Operacional Redes</h3>
+                <p>Procedimentos operacionais utilizados no setor de Redes internamente e externamente</p>
+                <button>Acessar Treinamento</button>
+  
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki HD Center</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #fefefe;
+            color: #04c804c3;
+            padding: 0px 0px;
+            z-index: 1000;
+        }
+        .header .logo {
+            margin-left: 20px;
+            display: inline-block;
+        }
+        .header nav a {
+            color: #07c700;
+            text-decoration: none;
+            margin: 0 15px;
+            position: relative;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: #26e600;
+            padding: 10px 0;
+            border-radius: 5px;
+        }
+        .dropdown a {
+            display: block;
+            color: #39f755;
+            padding: 5px 20px;
+            text-decoration: none;
+        }
+        .dropdown a:hover {
+            background-color: #00a20869;
+        }
+        .header nav a:hover .dropdown {
+            display: block;
+        }
+        .infinite-scroll {
+            height: 2000px; /* Apenas para simular rolagem infinita */
+            background: #f4f4f4;
+        }
+    
+    </style>
+</head>
+    <div class="header">
+        <div class="logo">
+            <!-- MENU FIXO -->
+             <a href="#" id="logo">
+            <img src="IMAGENS/LOGO-FINAL-GRUPO-HD-CENTER-PNG-1024x397.png" alt="Logo" height="50">
+            </a>
+        </div>
+        <nav>
+            
+            <a href="http://127.0.0.1:5500/TREINAMENTOS%20CONDOMINIOS/treinamentos-condominios.html">TREINAMENTOS CLIENTES</a>
+            <a href="TREINAMENTO INTERNO/treinamento-interno.html">PROCESSOS INTERNOS</a>
+            <a href="http://127.0.0.1:5500/DUVIDAS/duvidas.html">DÚVIDAS</a>
+        </nav>
+    </div>
+    <div class="content">
+        <div class="infinite-scroll">
+            <!-- Aqui você pode adicionar o conteúdo dinâmico -->
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Treinamentos</button>
+        <div class="dropdown-content">
+            <a href="TREINAMENTOS/3CX.pdf" target="_blank">3CX</a>
+            <a href="treinamento/APPHDCENTER.pdf" target="_blank">APP HD CENTER</a>
+            <a href="pagina-treinamentos.html">Ver todos os treinamentos</a>
+        </div>
+    </div>
+<!--AJUSTE MENU SUSPENSO-->
+
+</body>
+</html>

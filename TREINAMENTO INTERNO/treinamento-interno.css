@@ -1,0 +1,107 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px; /* Aumenta o espaço nas laterais */
+    background-color: #333;
+    color: white;
+}
+
+.header nav {
+    display: flex;
+    justify-content: space-evenly; /* Distribui os itens igualmente */
+}
+
+.header {
+    background-color: #ffffff; /* Cor branca */
+    padding: 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 3px rgb(105, 255, 29); /* Sombra sutil para destacar */
+}
+
+.header nav a {
+    color: #1bc907; /* Deixa os textos escuros para contraste */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header nav a:hover {
+    color: #25aa039d; /* Verde musgo */
+    text-shadow: 2px 2px 5px rgba(32, 255, 35, 0.789); /* Sombra suave */
+    transition: 0.3s ease-in-out; /* Efeito suave na transição */
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 10px 20px; /* Ajuste o padding aqui para diminuir a altura do cabeçalho */
+    height: 50px; /* Ajuste a altura aqui se necessário */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Para garantir que o cabeçalho fique acima dos outros elementos */
+}
+
+/* Barra lateral com os tópicos */
+.main-content {
+    margin-top: 10px; /* Cria a distância de 1 cm (aproximadamente) entre o cabeçalho fixo e a barra lateral */
+    display: auto;
+    justify-content: space-between;
+}
+
+/* Caixa de tópicos */
+.sidebar {
+    width: 30%; /* Lateral esquerda com os tópicos */
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+
+/* Estilo da barra de pesquisa */
+#search-bar {
+    width: 60%; /* Largura da barra de pesquisa (ajuste conforme necessário) */
+    height: 40px; /* Altura da barra */
+    margin: 10px auto; /* Centraliza a barra horizontalmente */
+    padding: 0 10px; /* Espaçamento interno */
+    border-radius: 20px; /* Bordas arredondadas */
+    background-color: #f0f0f0; /* Cor de fundo sutil */
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente */
+    justify-content: space-between; /* Coloca o campo de pesquisa e o botão nas extremidades */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    position: fixed; /* Fixa a barra no topo */
+    top: 50px; /* Distância do topo da página */
+    left: 50%; /* Centraliza a barra horizontalmente */
+    transform: translateX(-50%); /* Ajuste para garantir que a barra fique centralizada */
+    z-index: 999; /* Garante que a barra de pesquisa fique acima de outros elementos */
+}
+
+/* Estilo para o campo de entrada da pesquisa */
+#search-bar input {
+    width: 80%; /* A caixa de entrada ocupa a maior parte da barra */
+    padding: 5px 10px; /* Espaçamento interno */
+    border: none;
+    border-radius: 15px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    outline: none;
+}
+
+/* Estilo para o botão de pesquisa */
+#search-bar button {
+    background-color: #4CAF50; /* Cor do botão */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 15px; /* Borda arredondada */
+    cursor: pointer;
+}
+
+#search-bar button:hover {
+    background-color: #45a049; /* Efeito de hover */
+}
