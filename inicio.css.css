@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+}
+
+.header {
+  background-color: white;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.header nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #04c804;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  margin-top: 70px; /* espaço abaixo do header */
+  padding: 20px;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #e6ffe6;
+  padding: 15px;
+  border-radius: 10px;
+  margin-right: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  color: #2d862d;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar li {
+  padding: 8px 0;
+  font-size: 15px;
+}
+
+.feed {
+  flex: 1;
+  max-width: 800px;
+}
+
+/* Post padrão */
+.post {
+  background: white;
+  padding: 15px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Cabeçalho */
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+/* Imagem de perfil */
+.profile-pic {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info strong {
+  font-size: 14px;
+}
+
+.profile-info span {
+  font-size: 12px;
+  color: #777;
+}
+
+/* Imagem da publicação */
+.post-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Texto da publicação */
+.post-body {
+  padding: 5px 0;
+}
+
+.post-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.caption {
+  font-size: 14px;
+  color: #444;
+}
+
+/* Botão de curtir */
+.like-button {
+  background-color: transparent;
+  border: 1px solid #e74c3c;
+  padding: 8px 12px;
+  border-radius: 20px;
+  color: #e74c3c;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.like-button:hover {
+  background-color: #e74c3c;
+  color: white;
+}
