@@ -1,245 +1,185 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="duvidas.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DUVIDAS</title>
-    <style>
-              body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: #fefefe;
-            color: #04c804c3;
-            padding: 0px 0px;
-            z-index: 1000;
-        }
-        .header .logo {
-            margin-left: 20px;
-            display: inline-block;
-        }
-        .header nav a {
-            color: #07c700;
-            text-decoration: none;
-            margin: 0 15px;
-            position: relative;
-        }
+  <meta charset="UTF-8">
+  <title>Dúvidas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./duvidas.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-        .dropdown {
-            display: none;
-            position: absolute;
-            background-color: #26e600;
-            padding: 10px 0;
-            border-radius: 5px;
-        }
-        .dropdown a {
-            display: block;
-            color: #39f755;
-            padding: 5px 20px;
-            text-decoration: none;
-        }
-        .dropdown a:hover {
-            background-color: #00a20869;
-        }
-        .header nav a:hover .dropdown {
-            display: block;
-        }
-        .infinite-scroll {
-            height: 2000px; /* Apenas para simular rolagem infinita */
-            background: #f4f4f4;
-        }
-    
-    
-    </style>
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #fefefe;
+      color: #04c804c3;
+      padding: 0px 0px;
+      z-index: 1000;
+    }
+
+    .header .logo {
+      margin-left: 20px;
+      display: inline-block;
+    }
+
+    .header nav a {
+      color: #07c700;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    .saudacao-inicial {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 20px;
+      margin-top: 70px;
+    }
+
+    .container {
+      display: flex;
+      margin: 20px;
+    }
+
+    .campo-duvidas {
+      flex: 2;
+      padding: 20px;
+    }
+
+    .lista-duvidas {
+      flex: 1;
+      padding: 20px;
+      border-left: 2px solid #ccc;
+    }
+
+    .lista-duvidas ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .lista-duvidas ul li {
+      padding: 10px;
+      cursor: pointer;
+      background-color: #f9f9f9;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+
+    .lista-duvidas ul li:hover {
+      background-color: #f1f1f1;
+    }
+
+    .balao-duvidas {
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    form input[type="text"],
+    form textarea {
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    form input[type="file"] {
+      margin-bottom: 10px;
+    }
+
+    form button {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
-    <div class="header">
-        <div class="logo">
-            
-             <!-- MENU FIXO -->
-             <a href="http://127.0.0.1:5500/index.html">
-                <img src="../IMAGENS/LOGO-FINAL-GRUPO-HD-CENTER-PNG-1024x397.png" alt="Logo da empresa" height="50">
-                </a>
-        </div>
-        <nav class="menu-fixo">
-            <a href="index.html">
-        
-            </a>
-            <ul>
-                <a href="http://127.0.0.1:5500/index.html#">INICIO</a>
-                <a href="http://127.0.0.1:5500/TREINAMENTOS%20CONDOMINIOS/treinamentos-condominios.html">TREINAMENTOS CLIENTES</a>
-                <a href="http://127.0.0.1:5500/TREINAMENTO%20INTERNO/treinamento-interno.html">PROCESSOS INTERNOS</a>
-            </ul>
-        </nav>
-    </div>
-    <div class="content">
-        <div class="infinite-scroll">
-            <body class="pagina-treinamentos">
+<body>
 
-    <html lang="pt-BR">
-    <head>
-      <meta charset="UTF-8">
-      <title>Campo de Dúvidas</title>
-      <style>
-       
-        /* Saudação inicial */
-        .saudacao-inicial {
-          background-color: #4CAF50;
-          color: white;
-          text-align: center;
-          padding: 10px;
-          font-size: 20px;
-        }
-    
-        /* Estilo do container principal */
-        .container {
-          display: flex;
-          margin-top: 20px;
-        }
-    
-        /* Área do balão de dúvidas (2/3 da página) */
-        .campo-duvidas {
-          flex: 2;
-          padding: 20px;
-        }
-    
-        /* Área de dúvidas frequentes (1/3 da página) */
-        .lista-duvidas {
-          flex: 1;
-          padding: 20px;
-          border-left: 2px solid #ccc;
-        }
-    
-        .lista-duvidas ul {
-          list-style-type: none;
-          padding: 0;
-        }
-    
-        .lista-duvidas ul li {
-          padding: 10px;
-          cursor: pointer;
-          background-color: #f9f9f9;
-          margin-bottom: 10px;
-          border-radius: 5px;
-        }
-    
-        .lista-duvidas ul li:hover {
-          background-color: #f1f1f1;
-        }
-    
-        /* Estilo do balão de dúvidas */
-        .balao-duvidas {
-          width: 100%;
-          height: 300px;
-          border: 1px solid #ccc;
-          border-radius: 10px;
-          padding: 10px;
-          overflow-y: auto;
-        }
-    
-        .balao-duvidas textarea {
-          width: 100%;
-          height: 80%;
-          padding: 10px;
-          border-radius: 5px;
-          border: 1px solid #ccc;
-        }
-    
-        /* Formulário de envio */
-        form {
-          display: flex;
-          flex-direction: column;
-        }
-    
-        form input[type="text"],
-        form textarea {
-          margin-bottom: 10px;
-          padding: 10px;
-          border-radius: 5px;
-          border: 1px solid #ccc;
-        }
-    
-        form input[type="file"] {
-          margin-bottom: 10px;
-        }
-    
-        form button {
-          padding: 10px;
-          background-color: #4CAF50;
-          color: white;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-        }
-    
-        form button:hover {
-          background-color: #45a049;
-        }
-      </style>
-    </head>
-    <body>
-    
-      <!-- Saudação inicial (aparece no topo) -->
-      <div class="saudacao-inicial">
-        Olá, como podemos ajudar você hoje?
+  <!-- MENU FIXO -->
+  <div class="header">
+    <div class="logo">
+      <a href="../index.html">
+        <img src="../imagens/logo.png" alt="Logo da empresa" height="50">
+      </a>
+    </div>
+    <nav>
+      <a href="../index.html">INÍCIO</a>
+      <a href="../treinamentos-condominios/treinamentos-condominios.html">TREINAMENTO CLIENTES</a>
+      <a href="../treinamento-interno/treinamento-interno.html">PROCESSOS INTERNOS</a>
+    </nav>
+  </div>
+
+  <!-- Saudação -->
+  <div class="saudacao-inicial">
+    Olá, como podemos ajudar você hoje?
+  </div>
+
+  <!-- Conteúdo -->
+  <div class="container">
+    <!-- Campo de dúvidas -->
+    <div class="campo-duvidas">
+      <div class="balao-duvidas">
+        <h3>Envie sua dúvida</h3>
+        <form action="https://formspree.io/f/{SEU_ENDPOINT}" method="POST" enctype="multipart/form-data">
+          <input type="text" name="nome" placeholder="Seu setor" required>
+          <textarea name="mensagem" placeholder="Escreva sua dúvida aqui..." required></textarea>
+          <input type="file" name="imagem" accept="image/*">
+          <button type="submit">Enviar</button>
+        </form>
       </div>
-    
-      <!-- Container principal com a divisão -->
-      <div class="container">
-        <!-- Área do balão de dúvidas (2/3 da página) -->
-        <div class="campo-duvidas">
-          <div class="balao-duvidas">
-            <h3>Envie sua dúvida</h3>
-            <!-- Formulário para enviar dúvidas -->
-            <form action="https://formspree.io/f/{seu_endpoint}" method="POST" enctype="multipart/form-data">
-              <input type="text" name="nome" placeholder="Seu setor" required>
-              <textarea name="mensagem" placeholder="Escreva sua dúvida aqui..." required></textarea>
-              <input type="file" name="imagem" accept="image/*">
-              <button type="submit">Enviar</button>
-            </form>
-          </div>
+    </div>
+
+    <!-- Dúvidas Frequentes -->
+    <div class="lista-duvidas">
+      <h3>Dúvidas Frequentes</h3>
+      <ul>
+        <li onclick="mostrarDuvida('duvida1')">Como cadastrar um novo morador?</li>
+        <li onclick="mostrarDuvida('duvida2')">Erro ao abrir o portão com tag veicular</li>
+        <li onclick="mostrarDuvida('duvida3')">Sistema de câmeras não está gravando</li>
+      </ul>
+
+      <div class="respostas-duvidas">
+        <div id="duvida1" style="display:none;">
+          Para cadastrar um novo morador, vá até o menu "Moradores", clique em "Adicionar", preencha os dados e salve.
         </div>
-    
-        <!-- Área de dúvidas frequentes (1/3 da página) -->
-        <div class="lista-duvidas">
-          <h3>Dúvidas Frequentes</h3>
-          <ul>
-            <li onclick="mostrarDuvida('duvida1')">Como cadastrar um novo morador?</li>
-            <li onclick="mostrarDuvida('duvida2')">Erro ao abrir o portão com tag veicular</li>
-            <li onclick="mostrarDuvida('duvida3')">Sistema de câmeras não está gravando</li>
-          </ul>
-    
-          <div class="respostas-duvidas">
-            <div id="duvida1" style="display:none;">
-              Para cadastrar um novo morador, vá até o menu "Moradores", clique em "Adicionar", preencha os dados e salve.
-            </div>
-            <div id="duvida2" style="display:none;">
-              Verifique se a tag está cadastrada corretamente. Caso contrário, solicite a inclusão junto ao síndico.
-            </div>
-            <div id="duvida3" style="display:none;">
-              Acesse a central de câmeras, confira se o armazenamento está funcionando e se o sistema está atualizado.
-            </div>
-          </div>
+        <div id="duvida2" style="display:none;">
+          Verifique se a tag está cadastrada corretamente. Caso contrário, solicite a inclusão junto ao síndico.
+        </div>
+        <div id="duvida3" style="display:none;">
+          Acesse a central de câmeras, confira se o armazenamento está funcionando e se o sistema está atualizado.
         </div>
       </div>
-    
-      <script>
-        // Função para mostrar a resposta da dúvida ao clicar
-        function mostrarDuvida(id) {
-          const todas = document.querySelectorAll('.respostas-duvidas > div');
-          todas.forEach(div => div.style.display = 'none');
-          const ativa = document.getElementById(id);
-          if (ativa) ativa.style.display = 'block';
-        }
-      </script>
-    
-    </body>
-    </html>
+    </div>
+  </div>
+
+  <script>
+    function mostrarDuvida(id) {
+      const todas = document.querySelectorAll('.respostas-duvidas > div');
+      todas.forEach(div => div.style.display = 'none');
+      const ativa = document.getElementById(id);
+      if (ativa) ativa.style.display = 'block';
+    }
+  </script>
 
 </body>
 </html>

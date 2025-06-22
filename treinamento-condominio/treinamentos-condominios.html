@@ -1,96 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="treinamentos-condominios.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TREINAMENTO CONDOMINIO</title>
-    <style>
-          body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: #fefefe;
-            color: #04c804c3;
-            padding: 0px 0px;
-            z-index: 1000;
-        }
-        .header .logo {
-            margin-left: 20px;
-            display: inline-block;
-        }
-        .header nav a {
-            color: #07c700;
-            text-decoration: none;
-            margin: 0 15px;
-            position: relative;
-        }
-
-        .dropdown {
-            display: none;
-            position: absolute;
-            background-color: #26e600;
-            padding: 10px 0;
-            border-radius: 5px;
-        }
-        .dropdown a {
-            display: block;
-            color: #39f755;
-            padding: 5px 20px;
-            text-decoration: none;
-        }
-        .dropdown a:hover {
-            background-color: #00a20869;
-        }
-        .header nav a:hover .dropdown {
-            display: block;
-        }
-        .infinite-scroll {
-            height: 2000px; /* Apenas para simular rolagem infinita */
-            background: #f4f4f4;
-        }
-        
-
-    
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treinamento Condomínio</title>
+  <link rel="stylesheet" href="./treinamentos-condominios.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #fefefe;
+      color: #04c804c3;
+      padding: 0px 0px;
+      z-index: 1000;
+    }
+    .header .logo {
+      margin-left: 20px;
+      display: inline-block;
+    }
+    .header nav a {
+      color: #07c700;
+      text-decoration: none;
+      margin: 0 15px;
+      position: relative;
+    }
+    .dropdown {
+      display: none;
+      position: absolute;
+      background-color: #26e600;
+      padding: 10px 0;
+      border-radius: 5px;
+    }
+    .dropdown a {
+      display: block;
+      color: #39f755;
+      padding: 5px 20px;
+      text-decoration: none;
+    }
+    .dropdown a:hover {
+      background-color: #00a20869;
+    }
+    .header nav a:hover .dropdown {
+      display: block;
+    }
+    .content {
+      margin-top: 100px;
+      padding: 20px;
+    }
+  </style>
 </head>
-    <div class="header">
-        <div class="logo">
-            
-             <!-- MENU FIXO -->
-             <a href="http://127.0.0.1:5500/index.html">
-                <img src="../IMAGENS/LOGO-FINAL-GRUPO-HD-CENTER-PNG-1024x397.png" alt="Logo da empresa" height="50">
-                </a>
-        </div>
-        <nav class="menu-fixo">
-            <a href="index.html">
-        
-            </a>
-            <ul>
-                <a href="http://127.0.0.1:5500/index.html">INICIO</a>
-                <a href="http://127.0.0.1:5500/TREINAMENTO%20INTERNO/treinamento-interno.html">PROCESSOS INTERNOS</a>
-                <a href="http://127.0.0.1:5500/DUVIDAS/duvidas.html">DUVIDAS</a>
-            </ul>
-        </nav>
-    </div>
-    <div class="content">
-        <div class="infinite-scroll">
-            <body class="pagina-treinamentos">
+<body>
 
-           
-            <!-- Aqui você pode adicionar o conteúdo dinâmico -->
-              <!-- Conteúdo da página -->
-    <h1>BEM VINDO A PAGINA DE TREINAMENTOS VOLTADOS AOS CONDOMÍNIOS</h1>
-    <p>Nessa página estarão disponíveis tutoriais de atividades que são utilizadas no dia a dia, pode consultar sempre que precisar.</p>
-
-        </div>
+  <!-- MENU FIXO -->
+  <div class="header">
+    <div class="logo">
+      <a href="../index.html">
+        <img src="../imagens/logo.png" alt="Logo da empresa" height="50">
+      </a>
     </div>
- 
+    <nav class="menu-fixo">
+      <a href="../index.html">INÍCIO</a>
+      <a href="../treinamento-interno/treinamento-interno.html">PROCESSOS INTERNOS</a>
+      <a href="../duvidas/duvidas.html">DÚVIDAS</a>
+    </nav>
+  </div>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <div class="content">
+    <h1>Bem-vindo à página de treinamentos voltados aos condomínios</h1>
+    <p>Nessa página estarão disponíveis tutoriais de atividades que são utilizadas no dia a dia. Pode consultar sempre que precisar.</p>
+  </div>
 
 </body>
 </html>
