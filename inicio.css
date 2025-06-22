@@ -4,6 +4,7 @@ body {
   background-color: #f8f8f8;
 }
 
+/* Cabeçalho fixo no topo */
 .header {
   background-color: white;
   padding: 10px 30px;
@@ -24,19 +25,29 @@ body {
   font-weight: bold;
 }
 
+/* Container principal: agora com espaço entre a sidebar e o feed */
 .container {
   display: flex;
-  margin-top: 70px; /* espaço abaixo do header */
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 70px;
   padding: 20px;
+  gap: 40px; /* Espaço entre sidebar e feed */
+  margin-right: 270px; /* Reserva espaço para o chat à direita */
 }
 
+/* Sidebar colada à esquerda */
 .sidebar {
   width: 220px;
   background-color: #e6ffe6;
   padding: 15px;
   border-radius: 10px;
-  margin-right: 20px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: fixed;
+  left: 0;
+  top: 70px;
+  height: calc(100vh - 70px);
+  overflow-y: auto;
 }
 
 .sidebar h3 {
@@ -54,9 +65,25 @@ body {
   font-size: 15px;
 }
 
+/* Feed de postagens centralizado */
 .feed {
-  flex: 1;
-  max-width: 800px;
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+/* Reposiciona o feed para não ficar embaixo da sidebar fixa */
+.feed {
+  margin-left: 240px;
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
 }
 
 /* Post padrão */
@@ -68,14 +95,13 @@ body {
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* Cabeçalho */
+/* Cabeçalho da postagem */
 .post-header {
   display: flex;
   align-items: center;
   margin-bottom: 12px;
 }
 
-/* Imagem de perfil */
 .profile-pic {
   width: 45px;
   height: 45px;
@@ -105,7 +131,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* Texto da publicação */
+/* Corpo da publicação */
 .post-body {
   padding: 5px 0;
 }
@@ -136,4 +162,132 @@ body {
 .like-button:hover {
   background-color: #e74c3c;
   color: white;
+}
+
+/* ===== CHAT LATERAL DIREITO ===== */
+.chat-sidebar {
+  position: fixed;
+  top: 70px;
+  right: 0;
+  width: 250px;
+  height: calc(100vh - 70px);
+  background-color: #f0f2f5;
+  border-left: 1px solid #ccc;
+  padding: 10px;
+  overflow-y: auto;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  z-index: 999;
+}
+
+.chat-sidebar h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.chat-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.chat-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.chat-list li:hover {
+  background-color: #e2e6ea;
+}
+
+.chat-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+  object-fit: cover;
+  border: 2px solid #4CAF50;
+}
+
+/* Popup de Chat Flutuante */
+.chat-popup {
+  position: fixed;
+  bottom: 0;
+  right: 280px;
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+.chat-header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.chat-body {
+  padding: 10px;
+  height: 200px;
+  overflow-y: auto;
+  display: block;
+  border-top: 1px solid #eee;
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+}
+
+.chat-input button {
+  padding: 6px 10px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chat-minimized .chat-body,
+.chat-minimized .chat-input {
+  display: none;
+}
+
+.chat-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 10px;
 }
