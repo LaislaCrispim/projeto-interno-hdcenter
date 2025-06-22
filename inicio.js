@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (logo) {
     logo.addEventListener("click", function (e) {
       e.preventDefault();
-      window.location.href = "index.html";
+      window.location.href = "inicio.html";
     });
   }
 
