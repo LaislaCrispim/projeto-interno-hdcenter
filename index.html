@@ -1,52 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Início - Wiki HD Center</title>
-  <link rel="stylesheet" href="./inicio.css">
+  <link rel="stylesheet" href="inicio.css" />
 </head>
 <body>
 
   <!-- Menu fixo no topo -->
   <div class="header">
     <div class="logo">
-      <a href="./index.html">
-        <img src="imagens/LOGO-FINAL-GRUPO-HD-CENTER-PNG-1024x397.png" alt="Logo" height="60">
+      <a href="index.html">
+        <img src="IMAGENS/LOGO-FINAL-GRUPO-HD-CENTER-PNG-1024x397.png" alt="Logo" height="50" />
       </a>
     </div>
     <nav>
-      <a href="./treinamento-condominio/treinamentos-condominios.html">TREINAMENTOS CLIENTES</a>
-      <a href="./treinamento-interno/treinamento-interno.html">PROCESSOS INTERNOS</a>
-      <a href="./duvidas/duvidas.html">DÚVIDAS</a>
+      <a href="TREINAMENTOS CONDOMINIOS/treinamentos-condominios.html">TREINAMENTOS CLIENTES</a>
+      <a href="TREINAMENTO INTERNO/treinamento-interno.html">PROCESSOS INTERNOS</a>
+      <a href="DUVIDAS/duvidas.html">DÚVIDAS</a>
     </nav>
   </div>
 
-  <!-- Container principal -->
+  <!-- Conteúdo principal -->
   <div class="container">
-    <!-- Menu lateral esquerdo -->
-    <aside class="sidebar">
-      <h3>Temas</h3>
-      <ul>
-        <li>📢 Avisos</li>
-        <li>🤝 Recrutamento</li>
-        <li>🔧 Integração de Sistema</li>
-        <li>📈 Marketing</li>
-      </ul>
-    </aside>
 
-    <!-- Feed de postagens -->
+ <aside class="sidebar">
+  <h3>Temas</h3>
+ <ul>
+  <li data-filter="todos">📋 Todos</li>
+  <li data-filter="recrutamento">🤝 Recrutamento Mutirão</li>
+  <li data-filter="avisos">📢 Avisos</li>
+  <li data-filter="marketing">📈 Marketing</li>
+  <li data-filter="informacoes">ℹ️ Informações</li>
+  <li data-filter="publicacao">📝 Publicações</li>
+</ul>
+</aside>
+
+<!-- Balão de Postagem -->
+<div class="post-box">
+  <h3>Criar uma nova publicação</h3>
+  <textarea placeholder="Escreva algo..."></textarea>
+   <input type="file" id="imagemPostagem" accept="image/*" />
+  <div class="post-buttons">
+  <div class="post-actions">
+    <button class="post-btn" data-tema="publicacao">📢 Publicação</button>
+    <button class="post-btn" data-tema="recrutamento">🤝 Recrutamento Mutirão</button>
+    <button class="post-btn" data-tema="avisos">📣 Avisos</button>
+    <button class="post-btn" id="criar-enquete">📈 Marketing</button>
+    <button class="post-btn" data-tema="informacoes">ℹ️ Informações</button>
+    <button class="post-btn" id="criar-enquete">📊 Criar Enquete</button>
+  </div>
+</div>
+
     <main class="feed">
+
       <!-- Post 1 -->
       <div class="post">
         <div class="post-header">
-          <img class="profile-pic" src="https://randomuser.me/api/portraits/women/45.jpg" alt="Foto de perfil">
+          <img class="profile-pic" src="https://randomuser.me/api/portraits/women/45.jpg" alt="Foto de perfil" />
           <div class="profile-info">
             <strong>@ana.souza</strong>
             <span>Marketing</span>
           </div>
         </div>
-        <img class="post-img" src="imagens/aniversariantes-junho.png" alt="Imagem da publicação">
+        <img class="post-img" src="imagens/aniversariantes-junho.png" alt="Imagem da publicação" />
         <div class="post-body">
           <h4 class="post-title">Campanha de Divulgação</h4>
           <p class="caption">Novo material da campanha de marketing disponível. Compartilhe com os clientes!</p>
@@ -57,38 +75,42 @@
       <!-- Post 2 -->
       <div class="post">
         <div class="post-header">
-          <img class="profile-pic" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto de perfil">
+          <img class="profile-pic" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto de perfil" />
           <div class="profile-info">
             <strong>@joao.ferreira</strong>
             <span>Integração de Sistema</span>
           </div>
         </div>
-        <img class="post-img" src="imagens/integracao-de-sistemas.png" alt="Imagem da publicação">
+        <img class="post-img" src="imagens/integracao-de-sistemas.png" alt="Imagem da publicação" />
         <div class="post-body">
           <h4 class="post-title">Mutirão de Integração</h4>
           <p class="caption">Estamos organizando um mutirão para integrar novos sistemas. Participe com sua equipe!</p>
         </div>
         <button class="like-button">❤️ Curtir <span class="like-count">0</span></button>
-
-        
       </div>
     </main>
   </div>
-<!-- Chat Sidebar -->
-<div class="chat-sidebar">
-  <h3>Funcionários</h3>
-  <ul class="chat-list">
-    <li onclick="openChat('ana.souza', 'https://randomuser.me/api/portraits/women/45.jpg')">
-      <img class="chat-avatar" src="https://randomuser.me/api/portraits/women/45.jpg" alt="Ana Souza">
-      @ana.souza
-    </li>
-    <li onclick="openChat('joao.ferreira', 'https://randomuser.me/api/portraits/men/32.jpg')">
-      <img class="chat-avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="João Ferreira">
-      @joao.ferreira
-    </li>
-  </ul>
+
+
+<!-- MENU DE CHAT LATERAL DIREITO -->
+<div class="chat-menu">
+  <div class="chat-user" data-user="@ana.souza" data-img="https://randomuser.me/api/portraits/women/45.jpg">
+    <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Ana Souza">
+    <span>@ana.souza</span>
+  </div>
+  <div class="chat-user" data-user="@joao.silva" data-img="https://randomuser.me/api/portraits/men/32.jpg">
+    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="João Silva">
+    <span>@joao.silva</span>
+  </div>
+  <div class="chat-user" data-user="@camila.melo" data-img="https://randomuser.me/api/portraits/women/65.jpg">
+    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Camila Melo">
+    <span>@camila.melo</span>
+  </div>
 </div>
 
-  <!-- Removido: script.js que não existe mais -->
+<!-- CONTÊINER DOS POPUPS DE CHAT -->
+<div id="chat-popups"></div>
+
+  <script src="inicio.js"></script>
 </body>
 </html>
